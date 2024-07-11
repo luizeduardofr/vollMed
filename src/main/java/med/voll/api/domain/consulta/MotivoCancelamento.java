@@ -1,6 +1,7 @@
 package med.voll.api.domain.consulta;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import med.voll.api.infra.exception.ValidacaoException;
 
 
 public enum MotivoCancelamento {
@@ -16,6 +17,6 @@ public enum MotivoCancelamento {
                 return motivoCancelamento;
             }
         }
-        throw new IllegalArgumentException("Motivo de cancelamento inválido: " + value);
+        throw new ValidacaoException("Motivo de cancelamento inválido: " + value);
     }
 }

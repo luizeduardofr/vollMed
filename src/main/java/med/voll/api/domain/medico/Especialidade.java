@@ -1,6 +1,7 @@
 package med.voll.api.domain.medico;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import med.voll.api.infra.exception.ValidacaoException;
 
 public enum Especialidade {
 
@@ -16,6 +17,6 @@ public enum Especialidade {
                 return especialidade;
             }
         }
-        throw new IllegalArgumentException("Especialidade inválida: " + value);
+        throw new ValidacaoException("Especialidade inválida: " + value);
     }
 }
