@@ -51,14 +51,14 @@ class MedicoControllerTest {
     }
 
     @Test
-    @DisplayName("Deveria devolver codigo http 200 quando informacoes estao validas")
+    @DisplayName("Deveria devolver codigo http 201 quando informacoes estao validas")
     @WithMockUser
     void cadastrar_cenario2() throws Exception {
         var dadosCadastro = new DadosCadastroMedico(
-                "Medico",
+                "Du",
                 "medico@voll.med",
                 "61999999999",
-                "123456",
+                "123444",
                 Especialidade.CARDIOLOGIA,
                 dadosEndereco());
 
@@ -74,8 +74,8 @@ class MedicoControllerTest {
                 null,
                 dadosCadastro.nome(),
                 dadosCadastro.email(),
-                dadosCadastro.crm(),
                 dadosCadastro.telefone(),
+                dadosCadastro.crm(),
                 dadosCadastro.especialidade(),
                 new Endereco(dadosCadastro.endereco())
         );
@@ -90,11 +90,11 @@ class MedicoControllerTest {
         return new DadosEndereco(
                 "rua taruma",
                 "bairro",
-                "19822124",
+                "19822222",
                 "Taruma",
                 "SP",
-                "casa",
-                "407"
+                null,
+                null
         );
     }
 }
