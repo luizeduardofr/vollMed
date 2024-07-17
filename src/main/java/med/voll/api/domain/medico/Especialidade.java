@@ -1,7 +1,7 @@
 package med.voll.api.domain.medico;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import med.voll.api.infra.exception.ValidacaoException;
+import med.voll.api.domain.ValidacaoException;
 
 public enum Especialidade {
 
